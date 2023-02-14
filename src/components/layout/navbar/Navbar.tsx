@@ -44,7 +44,7 @@ function Navbar() {
             );
           })}
         </div>
-        {/*  destopNav end */}
+        {/*  destopNav endcc */}
 
         <div className=" flex items-baseline">
           <h1 className=" bg-theme-parsian-green font-thin text-[20px] lg:text-[27px] px-[2px]">Note</h1>
