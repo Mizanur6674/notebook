@@ -1,0 +1,99 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply font-noto_sans text-white bg-white;
+}
+h1 {
+  @apply text-[27px] font-semibold leading-[38px];
+}
+
+h2 {
+  @apply text-[24px] font-semibold leading-[35px];
+}
+h3 {
+  @apply text-[21px] font-semibold tracking-widest leading-[29.4px];
+}
+h4 {
+  @apply text-[19px] font-semibold leading-[27px];
+}
+h5 {
+  @apply text-[17px] font-[500] leading-[26px];
+}
+h6 {
+  @apply text-[15px] font-[500] leading-[23px];
+}
+.p15 {
+  @apply text-[15px] font-[400] leading-[22.5px];
+}
+.p14 {
+  @apply text-[14px] font-[400] leading-[22.5px];
+}
+.p12 {
+  @apply text-[12px] font-[400] leading-[22.5px];
+}
+.p12_3 {
+  @apply text-[12px] font-[300] leading-[18px];
+}
+.btn1 {
+  @apply py-[15px] px-[30px] rounded text-white;
+}
+.btn2 {
+  @apply py-[13px] px-[26px] rounded text-white;
+}
+.tag {
+  @apply py-[10px] px-[20px] rounded;
+}
+
+.sb {
+  @apply border border-red-500;
+}
+
+.container {
+  width: calc(100% - 40px);
+  max-width: 1295px;
+  margin-inline: auto;
+}
+
+@media (min-width: 960px) {
+  .container {
+    width: calc(100% - 160px);
+  }
+}
+
+.swiper-pagination .swiper-pagination-bullet {
+  width: 24px;
+  height: 2px;
+  border-radius: 5px;
+  background-color: #00aaa1;
+}
+
+#top-side .swiper-pagination .swiper-pagination-bullet {
+  width: 12px;
+  height: 6px;
+  border-radius: 5px;
+  background-color: #666;
+}
+#top-side .swiper-pagination .swiper-pagination-bullet:hover {
+  width: 28px;
+  background-color: #00aaa1;
+}
+
+for testing
+/* width */
+#content::-webkit-scrollbar {
+  width: 20px;
+}
+
+/* Track */
+#content::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 10px;
+}
+
+/* Handle */
+#content::-webkit-scrollbar-thumb {
+  background: red;
+  border-radius: 10px;
+}
