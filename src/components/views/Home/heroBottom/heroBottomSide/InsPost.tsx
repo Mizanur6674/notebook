@@ -1,6 +1,9 @@
+import Image from "next/image";
 import React, { useState } from "react";
 import { AiOutlineInstagram } from "react-icons/ai";
+import { Avatar } from "react-lorem-ipsum";
 import { insPostsData } from "./HeroBottomSideData";
+import coolImages from "cool-images";
 
 function InsPost() {
   const [isShow, setIsShow] = useState(false);
@@ -12,11 +15,12 @@ function InsPost() {
       <div className=" mt-11 grid grid-cols-3 gap-3">
         {insPostsData.map((item, index) => {
           return (
+           
             <div
               key={index}
-              className="flex group justify-center items-center rounded bg-[#D9D9D9] hover:bg-[#acacad] aspect-square"
-            >
-              <AiOutlineInstagram size={26} className="hidden group-hover:block" />
+              className=" relative group rounded cursor-pointer w-[113px] h-[114px]">
+              <Image src={coolImages.one()} layout="fill" alt="instapic"/>
+              <AiOutlineInstagram size={26} className=" absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 hidden group-hover:block" />
             </div>
           );
         })}

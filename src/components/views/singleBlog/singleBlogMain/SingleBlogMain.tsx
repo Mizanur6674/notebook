@@ -5,6 +5,9 @@ import { IoShareSocialOutline } from "react-icons/io5";
 import { heroData, heroTopData } from "../../Home/HeroData";
 import Comments from "./Comments";
 import SingleForm from "./SingleForm";
+import coolImages from "cool-images";
+import Image from "next/image";
+import { Avatar } from "react-lorem-ipsum";
 
 function SingleBlogMain() {
   const [active, setActive] = useState(stepData[0].id);
@@ -17,19 +20,19 @@ function SingleBlogMain() {
         <div>
           <div className=" my-4 w-full flex items-center">
             <div className=" flex items-center">
-              <div className=" w-4 h-4">
-                <img className=" w-[14px]" src="/images/heroTop1.svg" alt="hrimg" />
-              </div>
+            <div className=" rounded-full overflow-hidden">
+                <Avatar gender="female" width={16} height={16} alt="hrimg" />
+            </div>
               <p className="p12 ml-1 mr-2 text-[#777]">Jesica Koli</p>
               <div className="mr-2 border-r border-[#777] h-3 "></div>
-              <div className=" w-4 h-4">
-                <img className=" w-[14px]" src="/images/heroTop2.svg" alt="hrimg" />
+              <div className=" rounded-full overflow-hidden">
+                <Image src="/images/heroTop2.svg" width={16} height={16} alt="hrimg" />
               </div>
               <p className="p12 ml-1 mr-2 text-[#777]">02 December 2022</p>
             </div>
           </div>
-          <div className="my-6 lg:my-10 xl:w-[856px]">
-            <img className=" w-full " src="/images/HeroRectangle.svg" alt="" />
+          <div className="my-6 lg:my-10">
+          <Image src={coolImages.one()} width={856} height={432} alt="top images"/>
           </div>
 
           <p className=" p15 text-theme-gray">
@@ -136,7 +139,7 @@ function SingleBlogMain() {
         <div className=" flex items-center gap-4">
           {socialIconsData.map((item, index) => {
             return (
-              <div className="w-5 h-5 border border-theme-light-gray rounded-full hover:bg-theme-parsian-green">
+              <div key={index} className="w-5 h-5 border border-theme-light-gray rounded-full hover:bg-theme-parsian-green">
                 <item.icon className="w-full text-theme-gray hover:text-white text-center" />
               </div>
             );
@@ -153,12 +156,12 @@ function SingleBlogMain() {
             <span className=" bg-theme-parsian-green text-white px-1 mr-3">See Related</span>Posts
           </h3>
           {/* for playback */}
-          <div className=" grid grid-cols-1 lg:grid-cols-2 gap-x-8">
+          <div className=" grid grid-cols-1 xl:grid-cols-2 gap-x-8">
             {heroData.map((item, index) => {
               return (
                 <div key={index}>
                   <div className=" mt-10 lg:mt-14 mb-6">
-                    <img src={item.img} alt="" className=" w-full" />
+                  <Image src={coolImages.one()} width={401} height={220} alt="top images"/>
                   </div>
                   <button className="mb-2 p12 bg-theme-deep-grinish-cyan px-1 text-theme-gray rounded hover:bg-theme-parsian-green hover:text-white">
                     {item.btn}
@@ -169,8 +172,8 @@ function SingleBlogMain() {
                       {heroTopData.map((item, index) => {
                         return (
                           <div key={index} className=" flex items-center ">
-                            <div className=" w-4 h-4">
-                              <img className=" w-[14px]" src={item.img} alt="hrimg" />
+                             <div className=" rounded-full overflow-hidden">
+                              <Image src={item.img} width={16} height={16} alt="hrimg" />
                             </div>
                             <p className="p12 ml-1 mr-2  text-[#777]">{item.name}</p>
                             {item.id !== heroTopData.length && <div className="mr-2 border-r border-[#777] h-3 "></div>}

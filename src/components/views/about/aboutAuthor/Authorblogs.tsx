@@ -1,6 +1,8 @@
+import Image from "next/image";
 import React from "react";
 import { heroTopData } from "../../Home/HeroData";
 import { authorBlogsData } from "./AuthorBlogsData";
+import coolImages from "cool-images";
 
 function Authorblogs() {
   return (
@@ -10,12 +12,12 @@ function Authorblogs() {
           <span className=" bg-theme-parsian-green text-white pr-1 mr-2 tracking-wide font-thin">Read</span>Author blogs
         </h1>
       </div>
-      <div className=" grid grid-cols-1 lg:grid-cols-3 gap-7">
+      <div className=" grid grid-cols-1 lg:max-xl:grid-cols-2 xl:grid-cols-3 gap-7">
         {authorBlogsData.map((item, index) => {
           return (
             <div key={index} className=" flex flex-col lg:mb-8">
               <div className=" w-full mt-5 lg:mt-0 order-2 lg:order-1">
-                <img src="/images/HeroRectangle.svg" className=" w-full" alt="" />
+              <Image src={coolImages.one()} width={401} height={220} alt="top images"/>
               </div>
 
               {/* for playback */}
@@ -29,16 +31,16 @@ function Authorblogs() {
                     {heroTopData.map((item, index) => {
                       return (
                         <div key={index} className=" flex items-center">
-                          <div className=" w-4 h-4">
-                            <img className="w-[14px]" src={item.img} alt="hrimg" />
-                          </div>
+                          <div className=" rounded-full overflow-hidden">
+                          <Image src={item.img} width={16} height={16} alt="hrimg" />
+                        </div>
                           <p className="p12 pl-1 mr-2 text-[#777]">{item.name}</p>
                           {item.id !== heroTopData.length && <div className="mr-2 border-r border-[#777] h-3 "></div>}
                         </div>
                       );
                     })}
                   </div>
-                  <p className=" p15 text-theme-gray">{item.paragraph}</p>
+                  <p className=" w-full sm:max-lg:w-[55%] p15 text-theme-gray">{item.paragraph}</p>
                 </div>
               </div>
             </div>

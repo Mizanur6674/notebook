@@ -28,8 +28,8 @@ function Faq() {
                   index === isActive ? "bg-theme-deep-grinish-cyan text-theme-black" : "bg-theme-grinish-cyan"
                 )}
               >
-                <h5 className=" capitalize text-theme-light-black">{item.title}</h5>
-                <button className="w-6 h-6 text-theme-cyan-blue cursor-pointer" onClick={() => setActive(index)}>
+                <h5 className=" text-[15px] sm:text-[19px] capitalize text-theme-light-black">{item.title}</h5>
+                <button className="w-3 h-3 sm:w-6 sm:h-6 text-theme-cyan-blue cursor-pointer" onClick={() => setActive(index)}>
                   {isActive !== index ? <FaPlus /> : <FaMinus />}
                 </button>
               </div>
@@ -45,7 +45,7 @@ function Faq() {
 
       {/* for Q & A */}
       <div className=" mt-20">
-        <h4 className=" text-theme-black text-center capitalize">Can't find an answer to your question?</h4>
+        <h4 className=" text-theme-black text-center capitalize">Can&apos;t find an answer to your question?</h4>
         <button className="mt-4 flex items-center justify-center gap-1 border border-theme-parsian-green rounded py-2 px-4 mx-auto">
           <h6 className=" text-theme-parsian-green text-center">Contact us</h6>
           <HiArrowSmRight className=" text-theme-parsian-green" />

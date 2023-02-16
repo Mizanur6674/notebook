@@ -1,11 +1,11 @@
 import React from "react";
-import { data, heroData, heroSideData, heroTopData } from "../HeroData";
+import { data, heroSideData, heroTopData } from "../HeroData";
 import { useState } from "react";
-import clsx from "clsx";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination } from "swiper";
 import "swiper/css";
 import "swiper/css/pagination";
+import Image from "next/image";
 
 function HeroTopSide() {
   const [active, setActive] = useState(heroSideData[0].id);
@@ -21,7 +21,8 @@ function HeroTopSide() {
         pagination={{ clickable: true }}
         className=" h-[540px] sm:h-[490px]"
       >
-        {data.map((e) => (
+        {data.map((e,index) => (
+          <div key={index}>
           <SwiperSlide>
             {e.map((item, index) => {
               return (
@@ -36,9 +37,9 @@ function HeroTopSide() {
                       {heroTopData.map((item, index) => {
                         return (
                           <div key={index} className=" mb-4 flex gap-2 items-center ">
-                            <div className=" w-4 h-4">
-                              <img className=" w-full" src={item.img} alt="hrimg" />
-                            </div>
+                            <div className=" rounded-full overflow-hidden">
+                          <Image src={item.img} width={16} height={16} alt="hrimg" />
+                        </div>
                             <p className=" p12 text-[#777]">{item.name}</p>
                             {item.id !== heroTopData.length && <div className=" border-r border-[#777] h-3 "></div>}
                           </div>
@@ -51,6 +52,8 @@ function HeroTopSide() {
               );
             })}
           </SwiperSlide>
+
+          </div>
         ))}
       </Swiper>
     </div>

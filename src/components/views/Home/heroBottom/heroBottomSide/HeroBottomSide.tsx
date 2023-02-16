@@ -1,16 +1,18 @@
 import React from "react";
-import HeroBottomMain from "../heroBottomMain/HeroBottomMain";
 import Categoris from "./Categoris";
-import { heroBottomSideData } from "./HeroBottomSideData";
 import InsPost from "./InsPost";
 import SearchTags from "./SearchTags";
 import SideAdd from "./SideAdd";
-import TopAuthors from "./TopAuthors";
 import Updates from "./Updates";
+import dynamic from "next/dynamic"
+const TopAuthors = dynamic(() => import('./TopAuthors'),{
+  ssr:false
+})
 
 function HeroBottomSide() {
+
   return (
-    <div className=" w-full">
+    <div className=" sm:max-lg:mx-auto sm:max-lg:w-[55%] lg:w-[361px]">
       <div>
         <TopAuthors />
       </div>

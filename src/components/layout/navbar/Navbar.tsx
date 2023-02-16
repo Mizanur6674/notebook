@@ -32,9 +32,9 @@ function Navbar() {
                 )}
 
                 <ul className=" text-theme-black hidden group-hover:block absolute right-0 top-10 w-32 bg-white rounded-md shadow-md">
-                  {item.child.map((e) => {
+                  {item.child.map((e,index) => {
                     return (
-                      <a href={e.href}>
+                      <a key={index} href={e.href}>
                         <li className="py-2 px-2 hover:bg-gray-200 hover:text-theme-parsian-green cursor-pointer">{e.name}</li>
                       </a>
                     );
@@ -52,8 +52,8 @@ function Navbar() {
           <div className=" bg-theme-parsian-green w-1 h-1 rounded-full"></div>
         </div>
 
-        <div className="flex items-center gap-x-10 text-theme-light-black">
-          <div className="hidden lg:flex items-center lg:gap-x-10 text-theme-light-black">
+        <div className=" flex items-center gap-x-10 text-theme-light-black cursor-pointer">
+          <div className="hidden lg:flex items-center lg:gap-x-10  text-theme-light-black">
             <CgSearch />
             <FiEdit />
             <p className="p15">Contact</p>

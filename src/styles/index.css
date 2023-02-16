@@ -79,6 +79,10 @@ h6 {
   width: 28px;
   background-color: #00aaa1;
 }
+#top-side .swiper-pagination .swiper-pagination-bullet-active {
+  width: 28px;
+  background-color: #00aaa1;
+}
 
 for testing
 /* width */

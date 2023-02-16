@@ -1,3 +1,5 @@
+import Image from "next/image";
+import coolImages from "cool-images";
 import React from "react";
 import { heroData, heroTopData } from "../HeroData";
 import HeroTopSide from "./HeroTopSide";
@@ -22,8 +24,8 @@ function HeroTop() {
                       {item.btn}
                     </button>
                     <h1 className="  lg:w-[82%] text-theme-black">{item.header}</h1>
-                    <div className="my-4 lg:my-6">
-                      <img src={item.img} alt="" />
+                    <div className=" my-4 lg:my-6">
+                     <Image src={coolImages.one()} width={401} height={220} alt="top images"/>
                     </div>
 
                     <div>
@@ -31,9 +33,9 @@ function HeroTop() {
                         {heroTopData.map((item, index) => {
                           return (
                             <div key={index} className=" mb-4 flex gap-2 items-center ">
-                              <div className=" w-4 h-4">
-                                <img className=" w-full" src={item.img} alt="hrimg" />
-                              </div>
+                        <div className=" rounded-full overflow-hidden">
+                          <Image src={item.img} width={16} height={16} alt="hrimg" />
+                        </div>
                               <p className=" p12 text-[#777]">{item.name}</p>
                               {item.id !== heroTopData.length && <div className=" border-r border-[#777] h-3 "></div>}
                             </div>

@@ -32,7 +32,7 @@ export interface HeroTopDataType {
 export const heroTopData: HeroTopDataType[] = [
   {
     id: 1,
-    img: "/images/heroTop1.svg",
+    img: "https://picsum.photos/30/30",
     name: "Jenny Kiaa",
   },
   {

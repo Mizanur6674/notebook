@@ -3,8 +3,8 @@ import { Pagination } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
-
 import { aboutTopData } from "./AboutTopData";
+import Image from "next/image";
 
 function AboutTop() {
   return (
@@ -62,12 +62,12 @@ function AboutTop() {
           modules={[Pagination]}
           slidesPerView={2}
           pagination={{ clickable: true }}
-          className=" h-28 lg:h-36"
+          className=" h-28 lg:h-24"
         >
           {aboutTopData.map((item, index) => {
             return (
               <SwiperSlide key={index}>
-                <img src={item.img} alt="" className=" w-[75%] h-[75%] mx-auto" />
+               <Image src={item.img} width={114} height={34} alt="hrimg" className=" mx-auto" />
               </SwiperSlide>
             );
           })}

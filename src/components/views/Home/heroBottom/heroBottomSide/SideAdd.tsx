@@ -3,7 +3,7 @@ import React from "react";
 function SideAdd() {
   return (
     <div
-      className=" mt-14 bg-theme-parsian-green -mx-6 lg:-mx-0
+      className=" mt-14 bg-theme-parsian-green -mx-6 sm:-mx-0
     "
     >
       <p className="p12 text-right pt-3 pr-3">Ad</p>

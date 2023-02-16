@@ -58,7 +58,7 @@ function Footer() {
                   <div key={index} onClick={() => setActive(item.id)}>
                     <item.icon
                       className={clsx(
-                        "w-6 h-6  text-[#999] border border-theme-light-gray rounded",
+                        "w-6 h-6 text-[#999] cursor-pointer border border-theme-light-gray rounded",
                         item.id === active && "p-1 bg-theme-parsian-green border-none text-[#fff]"
                       )}
                     />

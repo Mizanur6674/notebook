@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React from "react";
 import { categoriesData } from "./CategoriesData";
 
@@ -11,11 +12,12 @@ function Categories() {
             return (
               <div
                 key={index}
-                className=" py-7 bg-theme-deep-grinish-cyan text-theme-black rounded shadow hover:bg-theme-parsian-green hover:text-white group"
+                className=" py-7 bg-theme-deep-grinish-cyan text-theme-black rounded shadow cursor-pointer hover:bg-theme-parsian-green hover:text-white group"
               >
-                <div className=" w-10 h-10 mb-6 mx-auto">
-                  <img className="group-hover:hidden" src={item.img} alt="" />
-                  <img className="hidden group-hover:block" src={item.img1} alt="" />
+                <div className=" mb-6">
+                  <Image className="group-hover:hidden mx-auto" width={34.4} height={40} src={item.img} alt=" ctgImg" />
+                  <Image className="hidden group-hover:block mx-auto" width={34.4} height={40} src={item.img1} alt=" ctgImg" />
+                 
                 </div>
                 <h5 className="  text-center capitalize "> {item.title}</h5>
               </div>

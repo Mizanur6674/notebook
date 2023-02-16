@@ -35,9 +35,9 @@ function MobileNav() {
                     )}
 
                     <ul className=" text-theme-black hidden group-hover:block absolute -right-32 -top-0 w-32 bg-white rounded-md shadow-md">
-                      {item.child.map((e) => {
+                      {item.child.map((e, index) => {
                         return (
-                          <a href={e.href}>
+                          <a key={index} href={e.href}>
                             <li className="py-2 px-2 hover:bg-gray-200 hover:text-theme-parsian-green cursor-pointer">
                               {e.name}
                             </li>

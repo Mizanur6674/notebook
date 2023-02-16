@@ -1,13 +1,15 @@
+import Image from "next/image";
 import React from "react";
 import { aboutAuthorTopData } from "./AboutAthorTopData";
+import coolImages from "cool-images";
 
 function AboutAuthorTop() {
   return (
-    <div className=" bg-theme-grinish-cyan">
-      <div className=" container pt-14 lg:py-20">
-        <div className=" flex flex-col lg:flex-row items-center gap-6">
-          <div className=" -mx-6 lg:mx-0 order-2 lg:order-1">
-            <img className=" w-full" src="/images/authorRectangle1.svg" alt="" />
+    <div className=" bg-theme-grinish-cyan pt-14 lg:py-20">
+      <div className=" container">
+        <div className=" flex flex-col lg:flex-row lg:items-center gap-6">
+          <div className=" relative w-full h-[320px] sm:w-[526px] sm:h-[512px] order-2 lg:order-1">
+          <Image src={coolImages.one ()} layout="fill" alt=" authrtop"/>
           </div>
           <div className=" w-full md:w-[60%] order-1">
             <h2 className=" text-theme-black">Hi! I&#39;m Saimon D&#39;silva</h2>

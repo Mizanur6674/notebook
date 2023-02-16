@@ -5,7 +5,7 @@ import { FiEdit } from "react-icons/fi";
 
 function MblFooter() {
   return (
-    <div className="flex items-center justify-center gap-x-10 text-theme-light-black">
+    <div className=" flex items-center justify-center cursor-pointer gap-x-10 text-theme-light-black">
       <CgSearch className=" w-4 h-4" />
       <FiEdit className=" w-4 h-4" />
       <p className="p15">Contact</p>

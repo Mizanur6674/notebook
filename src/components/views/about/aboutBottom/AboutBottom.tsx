@@ -1,7 +1,9 @@
+import Image from "next/image";
 import React from "react";
 import { HiArrowNarrowRight } from "react-icons/hi";
 import { aboutBottomData } from "./AboutBottomData";
 import WriteOnNotebook from "./WriteOnNotebook";
+import coolImages from 'cool-images';
 
 function AboutBottom() {
   return (
@@ -16,9 +18,11 @@ function AboutBottom() {
           {aboutBottomData.map((item, index) => {
             return (
               <div key={index} className=" flex items-center gap-2 lg:gap-4">
-                <div className=" w-[150px] h-[150px] rounded bg-theme-light-gray"></div>
-                {/* <img src={item.img} alt="" /> */}
-                <div className=" ">
+                <div className=" relative w-[150px] h-[150px] rounded overflow-hidden">
+                <Image src={coolImages.one()} layout="fill" objectFit="cover" alt="top images"/>
+                </div>
+                
+                <div>
                   <h2 className=" text-theme-black">{item.name}</h2>
                   <h6 className=" text-[#777] pt-3 pb-5"> {item.post}</h6>
                   <div className=" flex items-center justify-center gap-1">

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { Avatar, name } from "react-lorem-ipsum";
 import { heroBottomSideData, HeroBottomSideDataType } from "./HeroBottomSideData";
 import SocialIcons from "./SocialIcons";
 
@@ -9,14 +9,14 @@ function TopAuthors() {
         <span className=" bg-theme-parsian-green text-white px-1 py-1 mr-2 font-thin text-[19px] lg:text-[21px]">Top</span>Authors
       </h3>
       <div className=" lg:py-4">
-        {heroBottomSideData.map((item: HeroBottomSideDataType, index) => {
+        {heroBottomSideData.map((item:HeroBottomSideDataType, index) => {
           return (
             <div key={index} className=" mt-10 flex items-center gap-6">
               <div className=" w-20 h-20">
-                <div className="w-full h-full bg-theme-light-gray rounded-full"></div>
+                <Avatar gender="female" className="w-full h-full bg-theme-light-gray rounded-full"></Avatar>
               </div>
               <div className=" w-[16rem]">
-                <h5 className=" text-theme-black">{item.title}</h5>
+                <h5 className=" text-theme-black">{name('female')}</h5>
                 <p className=" pt-2 pb-3 p12_3 text-theme-gray">
                   {item.subTitle}
                   <a className="p12 text-theme-black" href="">

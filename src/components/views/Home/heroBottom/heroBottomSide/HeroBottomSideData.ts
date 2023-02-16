@@ -25,7 +25,7 @@ export const heroBottomSideData: Array<HeroBottomSideDataType> = [
   },
   {
     id: 3,
-    title: "Jenny Kia",
+    title: "Jenny Lorem",
     subTitle: "Fashion designer, Blogger, activist",
   },
 ];
